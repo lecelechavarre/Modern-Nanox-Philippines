@@ -2,7 +2,7 @@
 
 ## Project Overview
 This is a **cloned website** for a display manufacturing company. 
-## ⚠️ Important Disclaimer
+## Important Disclaimer
 **This is a cloned website for development/educational purposes only:**
 - This is NOT the official Nanox Philippines website
 - All company information, contact details, and content are likely **placeholder/fictional**
