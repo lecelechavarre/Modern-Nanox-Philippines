@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   console.log('Nanox Philippines - Professional Website Initializing...');
 
-  // Loading Screen
+  // Loading Screen 
   const loadingScreen = document.getElementById('loading-screen');
   if (loadingScreen) {
     setTimeout(() => {
