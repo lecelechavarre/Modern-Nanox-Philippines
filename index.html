@@ -1,156 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" /> 
-  <title>NANOX Philippines - Advanced Display Manufacturing Solutions</title>
-  <meta name="description" content="Leading manufacturer of cutting-edge display technologies with 25+ years of expertise in electronic manufacturing services">
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Additional CSS for new sections and loading screen update */
-    .partners-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 40px;
-    }
-    
-    .partner-item {
-      flex: 0 0 calc(25% - 40px);
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    
-    .partner-item img {
-      max-width: 150px;
-      height: auto;
-      filter: grayscale(100%);
-      transition: filter 0.3s ease;
-    }
-    
-    .partner-item:hover img {
-      filter: grayscale(0%);
-    }
-    
-    .recognition-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-    
-    .recognition-item {
-      flex: 0 0 calc(33.333% - 30px);
-      background: white;
-      padding: 30px 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(13, 71, 161, 0.08);
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-    
-    .recognition-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(13, 71, 161, 0.15);
-    }
-    
-    .recognition-icon {
-      font-size: 3rem;
-      margin-bottom: 15px;
-    }
-    
-    .shareholders-section {
-      padding: 80px 0;
-      background: #f8fafc;
-    }
-    
-    .shareholders-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 40px;
-      box-shadow: 0 4px 20px rgba(13, 71, 161, 0.08);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    
-    .shareholders-table th,
-    .shareholders-table td {
-      padding: 16px 20px;
-      text-align: left;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    
-    .shareholders-table th {
-      background: #1565C0;
-      color: white;
-      font-weight: 600;
-    }
-    
-    .shareholders-table tr:last-child td {
-      border-bottom: none;
-    }
-    
-    .shareholders-table tr:nth-child(even) {
-      background: #f8fafc;
-    }
-    
-    .shareholders-table tr:hover {
-      background: #e3f2fd;
-    }
-    
-    /* Update loading screen to show logo */
-    .loading-logo {
-      width: 150px;
-      height: auto;
-      animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-    
-    /* Responsive styles */
-    @media (max-width: 1024px) {
-      .partner-item {
-        flex: 0 0 calc(33.333% - 40px);
-      }
-      
-      .recognition-item {
-        flex: 0 0 calc(50% - 30px);
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .partner-item {
-        flex: 0 0 calc(50% - 40px);
-      }
-      
-      .recognition-item {
-        flex: 0 0 100%;
-      }
-      
-      .shareholders-table {
-        display: block;
-        overflow-x: auto;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .partner-item {
-        flex: 0 0 100%;
-      }
-    }
-  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nanox Philippines | Precision Display Manufacturing</title>
+  <meta name="description" content="25+ years of excellence in advanced display manufacturing solutions. A strategic subsidiary of Japan Display Incorporated (JDI).">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Page Transition -->
-  <div class="page-transition" id="page-transition"></div>
-  
-  <!-- Loading Screen -->
+  <!-- Loading Screen (Preserved) -->
   <div class="loading-screen" id="loading-screen">
     <div class="loading-spinner">
       <img src="images/nanox-logo.png" alt="Nanox Philippines" class="loading-logo">
@@ -158,449 +23,469 @@
     </div>
   </div>
 
-  <!-- Back to Top Button -->
-  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#">
-        <img src="images/nanox-logo.png" alt="Nanox Philippines - Leading Display Manufacturer">
-      </a>
-
-      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav class="main-nav" id="main-nav">
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#products" class="nav-link">Products</a>
-        <a href="#recognition" class="nav-link">Recognition</a>
-        <a href="#shareholders" class="nav-link">Shareholders</a>
-        <a href="#contact" class="nav-link">Contact Us</a>
-        <div class="header-logo">
-          <img src="images/logo.png" width="140" height="50" alt="JDI Group">
-        </div>
-      </nav>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="/" class="header__logo">
+          <img src="images/nanox-logo.png" alt="Nanox Philippines">
+        </a>
+        
+        <button class="header__menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="header__nav" id="mainNav">
+          <a href="#about" class="header__nav-link">About</a>
+          <a href="#products" class="header__nav-link">Products</a>
+          <a href="#services" class="header__nav-link">Services</a>
+          <a href="#recognition" class="header__nav-link">Recognition</a>
+          <a href="#contact" class="header__nav-link">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- Enhanced Hero Section -->
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-background">
-        <div class="hero-shapes">
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
-          <div class="shape shape-3"></div>
-        </div>
-      </div>
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span>Since 1998</span>
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <span class="hero__badge">Since 1998</span>
+            <h1 class="hero__title">
+              <span class="hero__title-line">Precision in Every</span>
+              <span class="hero__title-line hero__title-line--accent">Display</span>
+            </h1>
+            <p class="hero__subtitle">25+ years of excellence in advanced display manufacturing. A strategic subsidiary of Japan Display Incorporated (JDI).</p>
+            <div class="hero__actions">
+              <a href="#contact" class="btn btn--primary">
+                Request Quotation
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M4.16669 10H15.8334M15.8334 10L10 4.16669M15.8334 10L10 15.8334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </a>
+              <a href="#products" class="btn btn--outline">Explore Products</a>
+            </div>
           </div>
-          <h1 class="hero-title">
-            <span class="title-line">A local leader in</span>
-            <span class="title-line highlight">the global display</span>
-            <span class="title-line">industry</span>
-          </h1>
-          <p class="hero-subtitle">Delivering excellence in customer service through world-class PersonalTech and innovative manufacturing solutions.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">
-              <span>Start Partnership</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </a>
-            <a href="#services" class="btn btn-secondary">Our Capabilities</a>
+          <div class="hero__visual">
+            <div class="hero__card hero__card--1">
+              <div class="hero__card-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M8 8H16M8 12H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="hero__card-content">
+                <h4>Camera Displays</h4>
+                <p>High resolution, low noise</p>
+              </div>
+            </div>
+            <div class="hero__card hero__card--2">
+              <div class="hero__card-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 8L12 3L20 8L12 13L4 8Z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M4 16L12 21L20 16" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M4 12L12 17L20 12" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="hero__card-content">
+                <h4>VR Technology</h4>
+                <p>High pixel density, low power</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Enhanced About Section with More Details -->
-    <section id="about" class="about">
+    <!-- Stats Bar -->
+    <div class="stats">
       <div class="container">
-        <div class="section-header">
-          <h2>About Nanox Philippines</h2>
-          <p class="section-subtitle">Pioneering display technology innovation for over two decades</p>
+        <div class="stats__grid">
+          <div class="stats__item">
+            <div class="stats__number">25+</div>
+            <div class="stats__label">Years of Excellence</div>
+          </div>
+          <div class="stats__item">
+            <div class="stats__number">100+</div>
+            <div class="stats__label">Global Partners</div>
+          </div>
+          <div class="stats__item">
+            <div class="stats__number">50M+</div>
+            <div class="stats__label">Displays Delivered</div>
+          </div>
+          <div class="stats__item">
+            <div class="stats__number">ISO</div>
+            <div class="stats__label">Certified Quality</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">About Nanox Philippines</h2>
+          <p class="section__subtitle">A strategic subsidiary of Japan Display Incorporated (JDI), delivering world-class display manufacturing solutions since 1998.</p>
         </div>
         
-        <div class="about-content">
-          <div class="about-text">
-            <p class="lead">Nanox Philippines stands as a premier manufacturing entity in the Philippines with 25 years of specialized expertise. As a strategic subsidiary of Japan Display Incorporated (JDI), we have established a global reputation for pioneering cutting-edge small and medium-sized LCD technologies.</p>
-            <p>Our organization excels in adapting to diverse client requirements, offering comprehensive Electronic Manufacturing Services (EMS) and end-to-end manufacturing solutions that drive innovation and operational excellence.</p>
+        <div class="about__grid">
+          <div class="about__content">
+            <p class="about__text">As a premier manufacturing entity in the Philippines, we combine 25 years of specialized expertise with JDI's global technology leadership. Our facility in Clark Freeport Zone operates at the forefront of display innovation.</p>
+            <div class="about__features">
+              <div class="about__feature">
+                <div class="about__feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>ISO 9001:2015</h4>
+                  <p>Quality Management</p>
+                </div>
+              </div>
+              <div class="about__feature">
+                <div class="about__feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>25+ Years</h4>
+                  <p>Manufacturing Excellence</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about__partners">
+            <h3>Strategic Partners</h3>
+            <div class="about__partner-logos">
+              <div class="partner-logo">
+                <img src="images/logo-sm-1.png" alt="Partner">
+              </div>
+              <div class="partner-logo">
+                <img src="images/logo-sm-2.png" alt="Partner">
+              </div>
+              <div class="partner-logo">
+                <img src="images/logo-sm-3.png" alt="Partner">
+              </div>
+              <div class="partner-logo">
+                <img src="images/logo-sm-4.png" alt="Partner">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section section--gray">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Products We Deliver</h2>
+          <p class="section__subtitle">High-precision display solutions for demanding applications</p>
+        </div>
+        
+        <div class="products__grid">
+          <div class="product-card">
+            <div class="product-card__icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="18" cy="12" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="product-card__title">Camera Displays</h3>
+            <p class="product-card__description">High resolution, low noise, smooth gradation for professional imaging applications.</p>
+            <ul class="product-card__features">
+              <li>Touch sensing</li>
+              <li>High brightness</li>
+              <li>Low reflectivity</li>
+            </ul>
           </div>
           
-          <!-- Partner Logos Section in Row Format -->
-          <div class="partner-section">
-            <h3>Our Strategic Partners</h3>
-            <div class="partners-row">
-              <div class="partner-item">
-                <img src="images/logo-sm-1.png" alt="Strategic Partner 1">
-              </div>
-              <div class="partner-item">
-                <img src="images/logo-sm-2.png" alt="Strategic Partner 2">
-              </div>
-              <div class="partner-item">
-                <img src="images/logo-sm-3.png" alt="Strategic Partner 3">
-              </div>
-              <div class="partner-item">
-                <img src="images/logo-sm-4.png" alt="Strategic Partner 4">
-              </div>
-            </div>
-          </div>
-
-          <!-- Features Grid -->
-          <div class="features-grid">
-            <div class="feature-card">
-              <div class="feature-icon">🔬</div>
-              <div class="feature-content">
-                <h4>Advanced R&D</h4>
-                <p>Continuous innovation in display technology and manufacturing processes</p>
-              </div>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">🌍</div>
-              <div class="feature-content">
-                <h4>Global Standards</h4>
-                <p>International quality certifications and compliance with industry benchmarks</p>
-              </div>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">⚡</div>
-              <div class="feature-content">
-                <h4>25+ Years Expertise</h4>
-                <p>Decades of specialized knowledge in display manufacturing and EMS</p>
-              </div>
-            </div>
-            <div class="feature-card">
-              <div class="feature-icon">🤝</div>
-              <div class="feature-content">
-                <h4>JDI Partnership</h4>
-                <p>Strategic subsidiary of Japan Display Incorporated global network</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Enhanced Products Section -->
-    <section id="products" class="products">
-      <div class="container">
-        <div class="section-header">
-          <h2>Products We Deliver</h2>
-          <p class="section-subtitle">We provide thin-film substrates with high-definition (high resolution), low noise (high SNR), and wide-area TFT switching functions using semiconductors with high electron mobility.</p>
-        </div>
-
-        <div class="products-grid">
           <div class="product-card">
-            <div class="product-image">
-              <img src="images/product-camera.png" alt="Camera displays">
+            <div class="product-card__icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 8L12 3L20 8L12 13L4 8Z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 16L12 21L20 16" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 12L12 17L20 12" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
             </div>
-            <h3>Camera</h3>
-            <p>Touch sensing, uniformity, smooth gradation, high brightness, low reflectivity, high resolution.</p>
+            <h3 class="product-card__title">Virtual Reality</h3>
+            <p class="product-card__description">Immersive displays with high pixel density and ultra-low latency.</p>
+            <ul class="product-card__features">
+              <li>High pixel density</li>
+              <li>Low power</li>
+              <li>Light weight</li>
+            </ul>
           </div>
-
+          
           <div class="product-card">
-            <div class="product-image">
-              <img src="images/product-vr.png" alt="VR displays">
+            <div class="product-card__icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 18V20H16V18" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
             </div>
-            <h3>Virtual Reality</h3>
-            <p>High display quality, high pixel density, low power consumption, light weight.</p>
+            <h3 class="product-card__title">Wearables</h3>
+            <p class="product-card__description">Ultra-low power, durable displays for next-generation wearables.</p>
+            <ul class="product-card__features">
+              <li>Ultra low power</li>
+              <li>Long lifetime</li>
+              <li>Durable design</li>
+            </ul>
           </div>
-
+          
           <div class="product-card">
-            <div class="product-image">
-              <img src="images/product-wearable.png" alt="Wearables">
+            <div class="product-card__icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 19H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
             </div>
-            <h3>Wearables</h3>
-            <p>Ultra low power consumption, light weight, durable, long lifetime.</p>
-          </div>
-
-          <div class="product-card">
-            <div class="product-image">
-              <img src="images/product-mobile.png" alt="Mobile displays">
-            </div>
-            <h3>Mobile</h3>
-            <p>High display quality, high pixel density, touch sensing, uniformity.</p>
+            <h3 class="product-card__title">Mobile Displays</h3>
+            <p class="product-card__description">High-quality displays with exceptional color accuracy and touch performance.</p>
+            <ul class="product-card__features">
+              <li>High pixel density</li>
+              <li>Touch sensing</li>
+              <li>Uniform brightness</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Enhanced Recognition Section in Row Format -->
-    <section id="recognition" class="recognition">
-      <div class="container">
-        <div class="section-header">
-          <h2>Significant Recognition</h2>
-          <p class="section-subtitle">Our commitment to excellence has been recognized through various certifications and awards</p>
-        </div>
-
-        <div class="recognition-row">
-          <div class="recognition-item">
-            <div class="recognition-icon">🏆</div>
-            <h3>ISO 14001:2015</h3>
-            <p>Environmental Management System Certification</p>
-          </div>
-          <div class="recognition-item">
-            <div class="recognition-icon">🛡️</div>
-            <h3>ISO 45001:2018</h3>
-            <p>Occupational Health and Safety Management</p>
-          </div>
-          <div class="recognition-item">
-            <div class="recognition-icon">✅</div>
-            <h3>ISO 9001:2015</h3>
-            <p>Quality Management System Certification</p>
-          </div>
-          <div class="recognition-item">
-            <div class="recognition-icon">📈</div>
-            <h3>Consistent Top Exporter</h3>
-            <p>Recognition for export excellence and performance</p>
-          </div>
-          <div class="recognition-item">
-            <div class="recognition-icon">👥</div>
-            <h3>Excellence in HR Management</h3>
-            <p>Outstanding human resources practices and development</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- New Shareholders Section -->
-    <section id="shareholders" class="shareholders-section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Major Shareholders</h2>
-          <p class="section-subtitle">Our valued shareholders and their investment in our company</p>
-        </div>
-        
-        <table class="shareholders-table">
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Shareholder</th>
-              <th>Number of Shares Held</th>
-              <th>Voting Rights Ratio (%)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Ichigo Trust</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>The Master Trust Bank of Japan, Ltd. (Trust Account)</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Nichia Corporation</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>JP JPMSE LUX RE NOMURA INT PLC 1 EQ CO</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>BNYM SA/NV FOR BNYM FOR BNYM GCM CLIENT ACCTS M ILM FE</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>JP JPMSE LUX RE BARCLAYS CAPITAL SEC LTD EQ CO</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>BNYM SA/NV FOR BNYM FOR BNY GCM CLIENT ACCOUNTS M LSCB RD</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>BNY GCM CLIENT ACCOUNT JPRD AC ISG (FE-AC)</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>JPLLC-CL JPY</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>Haneda Turtle Service Co., Ltd.</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="section">
       <div class="container">
-        <div class="section-header">
-          <h2>Our Services</h2>
-          <p class="section-subtitle">Comprehensive electronic manufacturing services and solutions</p>
+        <div class="section__header">
+          <h2 class="section__title">Our Services</h2>
+          <p class="section__subtitle">Comprehensive manufacturing and engineering solutions</p>
         </div>
         
-        <div class="services-grid">
+        <div class="services__grid">
           <div class="service-card">
-            <div class="service-icon">⚙️</div>
-            <h3>Manufacturing</h3>
-            <p>State-of-the-art manufacturing processes for display technologies</p>
-            <ul>
+            <div class="service-card__header">
+              <div class="service-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M16 21V5C16 3.89543 15.1046 3 14 3H10C8.89543 3 8 3.89543 8 5V21" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <h3>Manufacturing</h3>
+            </div>
+            <ul class="service-card__list">
               <li>LCD Panel Assembly</li>
               <li>Module Integration</li>
               <li>Quality Control</li>
+              <li>Supply Chain Management</li>
             </ul>
           </div>
           
           <div class="service-card">
-            <div class="service-icon">🔧</div>
-            <h3>Engineering</h3>
-            <p>Advanced engineering solutions for display applications</p>
-            <ul>
+            <div class="service-card__header">
+              <div class="service-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2V7M12 2L9 5M12 2L15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M4 8L12 12L20 8" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M4 16L12 20L20 16" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M4 12L12 16L20 12" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <h3>Engineering</h3>
+            </div>
+            <ul class="service-card__list">
               <li>Product Design</li>
               <li>Prototyping</li>
               <li>Testing & Validation</li>
+              <li>Process Optimization</li>
             </ul>
           </div>
           
           <div class="service-card">
-            <div class="service-icon">📊</div>
-            <h3>Consulting</h3>
-            <p>Expert consulting services for display technology implementation</p>
-            <ul>
+            <div class="service-card__header">
+              <div class="service-card__icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <h3>Consulting</h3>
+            </div>
+            <ul class="service-card__list">
               <li>Technology Assessment</li>
               <li>Implementation Strategy</li>
               <li>Performance Optimization</li>
+              <li>Market Analysis</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Enhanced Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Recognition Section -->
+    <section id="recognition" class="section section--gray">
       <div class="container">
-        <div class="section-header">
-          <h2>Get In Touch</h2>
-          <p class="section-subtitle">Ready to discuss your display technology requirements? Our team is here to help.</p>
+        <div class="section__header">
+          <h2 class="section__title">Certifications & Recognition</h2>
+          <p class="section__subtitle">Our commitment to quality and excellence</p>
         </div>
         
-        <div class="contact-grid">
-          <div class="contact-info">
-            <div class="info-card">
-              <div class="info-icon">📍</div>
-              <div class="info-content">
-                <h4>Visit Our Facility</h4>
-                <p>Civil Aviation Complex, Clark Freeport Zone, Pampanga 2023, Philippines</p>
-              </div>
+        <div class="recognition__grid">
+          <div class="recognition-card">
+            <div class="recognition-card__icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L15 9H22L16 14L19 21L12 16.5L5 21L8 14L2 9H9L12 2Z" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
             </div>
-            <div class="info-card">
-              <div class="info-icon">📞</div>
-              <div class="info-content">
-                <h4>Call Us</h4>
-                <p>+63-45-598-5699</p>
-                <span>Mon-Fri, 8AM-6PM</span>
-              </div>
+            <h4>ISO 9001:2015</h4>
+            <p>Quality Management</p>
+          </div>
+          
+          <div class="recognition-card">
+            <div class="recognition-card__icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
             </div>
-            <div class="info-card">
-              <div class="info-icon">✉️</div>
-              <div class="info-content">
-                <h4>Customer Inquiry</h4>
-                <p>nxp.nbmarketing.zz@j-display.com</p>
-                <span>Response within 24 hours</span>
-              </div>
+            <h4>ISO 14001:2015</h4>
+            <p>Environmental Management</p>
+          </div>
+          
+          <div class="recognition-card">
+            <div class="recognition-card__icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
             </div>
-            <div class="info-card">
-              <div class="info-icon">👥</div>
-              <div class="info-content">
-                <h4>HR & Careers</h4>
-                <p>nxp.hrd.zz@j-display.com</p>
-                <span>Phone: +63 918-946-7411</span>
-              </div>
+            <h4>ISO 45001:2018</h4>
+            <p>Health & Safety</p>
+          </div>
+          
+          <div class="recognition-card">
+            <div class="recognition-card__icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 3L21 21M21 3L3 21" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
             </div>
-            <div class="info-card">
-              <div class="info-icon">📦</div>
-              <div class="info-content">
-                <h4>Procurement</h4>
-                <p>nxp.procurement-im.zz@j-display.com</p>
-                <span>Phone: +63 998-960-8809</span>
+            <h4>Top Exporter</h4>
+            <p>Consistent Excellence</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__info">
+            <h2 class="contact__title">Get in Touch</h2>
+            <p class="contact__subtitle">Ready to discuss your display manufacturing needs? Our team is here to help.</p>
+            
+            <div class="contact__details">
+              <div class="contact-detail">
+                <div class="contact-detail__icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="12" cy="9" r="3" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Visit Us</h4>
+                  <p>Civil Aviation Complex, Clark Freeport Zone<br>Pampanga 2023, Philippines</p>
+                </div>
+              </div>
+              
+              <div class="contact-detail">
+                <div class="contact-detail__icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M22 16.92V19C22.001 19.7904 21.7508 20.5606 21.2894 21.1941C20.828 21.8277 20.1849 22.2899 19.447 22.5049C18.7092 22.7199 17.9213 22.6745 17.2111 22.3757C16.5008 22.0769 15.9106 21.5446 15.54 20.87L13.57 17.47C13.229 16.8631 13.0421 16.1795 13.0273 15.4802C13.0125 14.7809 13.1703 14.0895 13.485 13.4675C13.7997 12.8456 14.2609 12.3154 14.8243 11.9285C15.3876 11.5416 16.0332 11.3116 16.71 11.26L20 11" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M2 7.08C1.99856 6.28965 2.24885 5.51942 2.71025 4.88585C3.17165 4.25227 3.81473 3.79006 4.55261 3.57504C5.29048 3.36002 6.07836 3.40549 6.78862 3.70426C7.49888 4.00303 8.0891 4.53539 8.46 5.21L10.43 8.61C10.771 9.21686 10.9579 9.90046 10.9727 10.5998C10.9875 11.2991 10.8297 11.9905 10.515 12.6125C10.2003 13.2344 9.7391 13.7646 9.17574 14.1515C8.61239 14.5384 7.96676 14.7684 7.29 14.82L4 15" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Call Us</h4>
+                  <p>+63 45 598 5699</p>
+                  <span>Mon-Fri, 8:00 AM - 6:00 PM</span>
+                </div>
+              </div>
+              
+              <div class="contact-detail">
+                <div class="contact-detail__icon">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M22 7L12 14L2 7" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <p>nxp.nbmarketing.zz@j-display.com</p>
+                  <span>Response within 24 hours</span>
+                </div>
               </div>
             </div>
           </div>
           
-          <div class="contact-form-container">
-            <div class="form-header">
-              <h3>Start a Conversation</h3>
-              <p>Complete the form below and our team will contact you within 24 hours.</p>
-            </div>
-            <form id="contact-form" class="professional-form">
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Full Name *</label>
-                  <input type="text" name="name" required>
+          <div class="contact__form">
+            <h3>Request a Quotation</h3>
+            <p>Fill out the form below and our team will respond within 24 hours.</p>
+            
+            <form id="contactForm" class="form">
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" required>
                 </div>
-                <div class="form-group">
-                  <label>Company</label>
-                  <input type="text" name="company">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Email Address *</label>
-                  <input type="email" name="email" required>
-                </div>
-                <div class="form-group">
-                  <label>Phone Number</label>
-                  <input type="tel" name="phone">
+                <div class="form__group">
+                  <label for="company">Company</label>
+                  <input type="text" id="company" name="company">
                 </div>
               </div>
-              <div class="form-group">
-                <label>Inquiry Type *</label>
-                <select name="inquiry-type" required>
-                  <option value="">Select inquiry type</option>
-                  <option value="customer">Customer Inquiry</option>
-                  <option value="procurement">Procurement</option>
-                  <option value="career">Career Information</option>
-                  <option value="partnership">Partnership Opportunity</option>
+              
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form__group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone">
+                </div>
+              </div>
+              
+              <div class="form__group">
+                <label for="inquiry">Inquiry Type *</label>
+                <select id="inquiry" name="inquiry" required>
+                  <option value="">Select an option</option>
+                  <option value="quotation">Quotation Request</option>
+                  <option value="technical">Technical Support</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label>Message *</label>
-                <textarea name="message" rows="5" placeholder="Please describe your requirements, timeline, and any specific needs..." required></textarea>
+              
+              <div class="form__group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
               </div>
-              <button type="submit" class="submit-btn">
-                <span>Send Message</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2"/>
+              
+              <button type="submit" class="btn btn--primary btn--full">
+                Submit Request
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M4.16669 10H15.8334M15.8334 10L10 4.16669M15.8334 10L10 15.8334" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>
               </button>
-              <div class="form-status" id="form-status" aria-live="polite"></div>
             </form>
           </div>
         </div>
@@ -608,59 +493,140 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <img src="images/nanox-logo.png" alt="Nanox Philippines" class="footer-logo">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <img src="images/nanox-logo.png" alt="Nanox Philippines" class="footer__logo">
           <p>Leading the future of display technology through innovation, quality, and strategic partnerships.</p>
-          <div class="social-links">
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
-            <a href="#" aria-label="Twitter">Twitter</a>
-            <a href="#" aria-label="YouTube">YouTube</a>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M6 9H2V21H6V9Z" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M23 3C22.0424 3.67548 20.9821 4.19211 19.86 4.53C19.2577 3.83751 18.4573 3.34669 17.567 3.12393C16.6767 2.90116 15.7395 2.95724 14.8821 3.28545C14.0247 3.61365 13.2884 4.19729 12.773 4.95666C12.2575 5.71603 11.9877 6.61219 12 7.53V8.53C10.2426 8.57557 8.50127 8.18581 6.93101 7.39545C5.36074 6.60509 4.01032 5.44062 3 4C3 4 -1 13 5 17C3.33573 18.1156 1.39219 18.7393 -0.599976 18.8C5.40002 23 13 23 19.36 18.62C21.1237 17.2075 22.4295 15.309 23.14 13.16C23.6071 11.6791 23.7621 10.1221 23.6 8.58C24.3036 7.80644 24.8614 6.91646 25.25 5.95C24.4925 6.28485 23.6895 6.51064 22.86 6.62C23.7234 5.92896 24.3479 4.98009 24.64 3.92C23.8222 4.53112 22.9141 5.00625 21.94 5.33C21.3361 4.61129 20.5316 4.08698 19.631 3.82414C18.7304 3.56131 17.772 3.5718 16.877 3.85429C15.982 4.13679 15.1897 4.67828 14.6026 5.40996C14.0155 6.14164 13.6622 7.02827 13.59 7.96C12.6816 7.88602 11.7904 7.65712 10.9667 7.28511C10.143 6.9131 9.4027 6.40511 8.79 5.79C8.79 5.79 6.79 9.79 9.79 12.79C8.55713 13.5408 7.1645 13.993 5.71 14.1C5.71 14.1 7.21 16.1 10.71 15.1C9.53386 16.0085 8.15136 16.6085 6.69 16.84C6.69 16.84 9.79 19.84 15.79 16.84C18.2692 15.4106 20.0175 13.0905 20.63 10.38C20.9437 9.15686 21.0061 7.87994 20.81 6.62C21.2084 6.22495 21.5334 5.76212 21.77 5.25L23 3Z" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="6" width="20" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10 9L16 12L10 15V9Z" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </a>
           </div>
         </div>
         
-        <div class="footer-links">
-          <div class="footer-column">
+        <div class="footer__nav">
+          <div class="footer__nav-column">
             <h4>Company</h4>
             <a href="#about">About Us</a>
-            <a href="#leadership">Leadership</a>
             <a href="#careers">Careers</a>
             <a href="#news">News</a>
+            <a href="#leadership">Leadership</a>
           </div>
           
-          <div class="footer-column">
-            <h4>Services</h4>
-            <a href="#manufacturing">Manufacturing</a>
-            <a href="#engineering">Engineering</a>
-            <a href="#testing">Testing</a>
-            <a href="#consulting">Consulting</a>
+          <div class="footer__nav-column">
+            <h4>Solutions</h4>
+            <a href="#products">Products</a>
+            <a href="#services">Services</a>
+            <a href="#technology">Technology</a>
+            <a href="#innovation">Innovation</a>
           </div>
           
-          <div class="footer-column">
-            <h4>Contact</h4>
-            <a href="tel:+63455985699">+63 45 598 5699</a>
-            <a href="mailto:nxp.nbmarketing.zz@j-display.com">Sales Inquiry</a>
-            <a href="mailto:nxp.hrd.zz@j-display.com">HR Inquiry</a>
-            <a href="#visit">Visit Us</a>
+          <div class="footer__nav-column">
+            <h4>Support</h4>
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Use</a>
           </div>
         </div>
       </div>
       
-      <div class="footer-bottom">
-        <p>&copy; 2024 Nanox Philippines Inc. All Rights Reserved. | Part of Japan Display Incorporated Group</p>
-        <div class="footer-legal">
-          <a href="#privacy">Privacy Policy</a>
-          <a href="#terms">Terms of Service</a>
-          <a href="#cookies">Cookie Policy</a>
-        </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Nanox Philippines Inc. All rights reserved. A strategic subsidiary of Japan Display Incorporated (JDI).</p>
       </div>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <!-- Floating Inquiry Button (15px above back to top) -->
+  <div class="inquiry-float">
+    <button class="inquiry-float__btn" id="inquiryBtn">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M21 12V18C21 19.1046 20.1046 20 19 20H5C3.89543 20 3 19.1046 3 18V6C3 4.89543 3.89543 4 5 4H12" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M15 9L21 3M21 3H16.5M21 3V7.5" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span class="inquiry-float__tooltip">Inquire With Us</span>
+    </button>
+  </div>
+
+  <!-- Inquiry Modal -->
+  <div class="modal" id="inquiryModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__container">
+      <div class="modal__header">
+        <h3>Request a Quotation</h3>
+        <button class="modal__close" id="closeModalBtn">×</button>
+      </div>
+      <div class="modal__body">
+        <div class="privacy-section">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            Privacy Policy
+          </h4>
+          <div class="privacy-section__text">
+            <p>Nanox Philippines respects your privacy. The information you provide will be used solely to process your quotation request. We do not share your data with third parties without consent.</p>
+            <p>By submitting this form, you agree to our <a href="#">Privacy Policy</a> and consent to the processing of your personal data for quotation purposes.</p>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" id="privacyConsent">
+            <span>I have read and agree to the Privacy Policy</span>
+          </label>
+        </div>
+        
+        <div class="ms-form" id="msFormContainer">
+          <div class="ms-form__wrapper" id="msFormWrapper">
+            <!-- Microsoft Form will load here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/inquiry.js"></script>
+  
+  <!-- Loading Screen Fix -->
+  <script>
+    (function() {
+      setTimeout(function() {
+        var loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+          loadingScreen.classList.add('hidden');
+          setTimeout(function() {
+            if (loadingScreen.parentNode) loadingScreen.remove();
+          }, 600);
+        }
+      }, 800);
+    })();
+  </script>
 </body>
 </html>
-
-
